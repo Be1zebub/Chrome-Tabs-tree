@@ -3,9 +3,15 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 	const tabsList = document.querySelector(".tabs-list")
+	let highlightedTab
 
 	chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) => {
 		tabs.forEach(CreateTab)
+
+		highlightedTab.scrollIntoView({ behavior: "instant" })
+		setTimeout(() => {
+			highlightedTab.scrollIntoView({ behavior: "instant" })
+		}, 100)
 	})
 
 	const colors = {
@@ -216,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (tab.audible) {
 			const img = document.createElement("img")
-			img.alt = "Audiable"
+			img.alt = "Audible"
 			img.classList.add("small")
 			title.appendChild(img)
 
@@ -251,6 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (tab.highlighted) {
 			li.classList.add("highlighted")
+			highlightedTab = li
 		}
 
 		const span = document.createElement("span")
