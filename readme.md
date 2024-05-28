@@ -35,3 +35,4 @@ How todo?
 
 1. fix favicon display for localhost tabs
 2. add loading circle display while tab loading
+3. rewrite in svelte
