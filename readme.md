@@ -2,7 +2,7 @@
 
 A tiny chrome extension that improves QOL
 
-![image](https://github.com/Be1zebub/Chrome-Tabs-tree/assets/34854689/f1d3afc1-3d30-4c47-b742-8ea18995dbee)
+![preview](preview.png)
 
 ## Usage
 
