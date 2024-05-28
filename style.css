@@ -206,3 +206,33 @@ footer>p>a,
 footer>p>a:visited {
     color: rgb(0, 168, 252);
 }
+
+#context-menu {
+	position: absolute;
+	background-color: #111214;
+	padding: 6px 8px;
+	border-radius: 8px;
+}
+
+#context-menu > li {
+	color: #E3E3E3;
+	font-size: 14px;
+	padding: 6px 8px;
+	min-height: 24px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+}
+
+#context-menu > li:hover {
+	background-color: #505CDC;
+}
+
+#context-menu > li.warning {
+	color: #F23F42;
+}
+
+#context-menu > li.warning:hover {
+	background-color: #DA373C;
+	color: white;
+}

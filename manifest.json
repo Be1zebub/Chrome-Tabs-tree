@@ -8,7 +8,8 @@
         "tabs",
 		"tabGroups",
 		"activeTab",
-        "commands"
+        "commands",
+		"bookmarks"
     ],
 	"host_permissions": [
 		"http://*/*",
