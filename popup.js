@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) => {
 		tabs.forEach(CreateTab)
 
-		highlightedTab.scrollIntoView({ behavior: "instant" })
+		highlightedTab.scrollIntoView({ behavior: "instant", block: "center" })
 		setTimeout(() => {
-			highlightedTab.scrollIntoView({ behavior: "instant" })
+			highlightedTab.scrollIntoView({ behavior: "instant", block: "center" })
 		}, 100)
 	})
 
