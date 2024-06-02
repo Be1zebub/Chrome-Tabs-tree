@@ -26,11 +26,7 @@ But if the project gets community, i will do it.
 I dont plan to do this on my side because i use only chrome  
 But feel free to pr, i will push it in new branches.  
 
-How todo?
-
-1. Edit the manifest a little
-2. Replace chrome.tabs & chrome.tabGroups with your browser api
-
+view [/src/lib/api/chrome.js](https://github.com/Be1zebub/Chrome-Tabs-tree/blob/svelte/src/lib/api/chrome.js) for example
 ## Plans
 
 1. fix favicon display for localhost tabs
