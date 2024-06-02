@@ -8,7 +8,7 @@
 		group.SetCollapsed(!group.IsCollapsed())
 	}
 
-	console.log("group?", group)
+	console.log("group tabs", tabs[0].data)
 </script>
 
 <li>
@@ -18,7 +18,7 @@
 	{#if !group.IsCollapsed()}
 		<ul>
 			{#each tabs as tab}
-				<Tab {tab} />
+				<Tab tab={tab.data} />
 			{/each}
 		</ul>
 	{/if}
