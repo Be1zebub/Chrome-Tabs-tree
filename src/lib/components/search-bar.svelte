@@ -13,15 +13,17 @@
 
 	function keyup(event) {
 		let userinput = event.target.value.trim().toLowerCase()
-		hidden = {}
+		let newHidden = {}
 
 		tabs.forEach((tab) => {
-			const visible = userinput.length == 0 || FzySearch(userinput, tab)
+			const visible = FzySearch(userinput, tab)
 
 			if (visible == false) {
-				hidden[tab.id] = true
+				newHidden[tab.id] = true
 			}
 		})
+
+		hidden = newHidden
 	}
 </script>
 

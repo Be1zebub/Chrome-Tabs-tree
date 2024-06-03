@@ -4,21 +4,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href="favicon.png" />
+		<meta name="darkreader-lock" />
 		<style>
 			body {
-				font-family: Arial, sans-serif;
-				width: 512px;
-				max-height: 768px;
 				margin: 0;
-				padding: 10px;
-				box-sizing: border-box;
-				overflow-y: auto;
-				background-color: #131313;
+				background-color: #1a1a1a;
 			}
 		</style>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div id="app-root" style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

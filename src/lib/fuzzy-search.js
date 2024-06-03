@@ -56,15 +56,12 @@ function Fuzzy2(needle, haystack) {
 }
 
 export default function FzySearch(userinput, tab) {
-	let title = tab.tab.title.toLowerCase()
-	let url = tab.tab.url.toLowerCase()
+	let title = tab.GetTitle().toLowerCase()
+	let url = tab.GetURL().toLowerCase()
 
 	return (
-		title.includes(userinput) ||
-		url.includes(userinput) ||
-		// Fuzzy1(userinput, title) ||
-		// Fuzzy1(userinput, url) ||
-		Fuzzy2(userinput, title) ||
-		Fuzzy2(userinput, url)
+		title.includes(userinput) || url.includes(userinput)
+		// || Fuzzy2(userinput, title)
+		// || Fuzzy2(userinput, url)
 	)
 }

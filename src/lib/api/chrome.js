@@ -39,7 +39,7 @@ if (dev) {
 		},
 		{
 			active: false,
-			audible: true,
+			audible: false,
 			autoDiscardable: true,
 			discarded: false,
 			favIconUrl:
@@ -53,11 +53,35 @@ if (dev) {
 			mutedInfo: {
 				muted: false,
 			},
-			pinned: false,
+			pinned: true,
 			selected: false,
 			status: "complete",
 			title: "YouTube",
 			url: "https://www.youtube.com/",
+			width: 1920,
+			windowId: 2009560141,
+		},
+		{
+			active: false,
+			audible: true,
+			autoDiscardable: true,
+			discarded: false,
+			favIconUrl:
+				"https://www.youtube.com/s/desktop/905763c7/img/favicon_32x32.png",
+			groupId: -1,
+			height: 919,
+			highlighted: false,
+			id: 2009560162,
+			incognito: true,
+			index: 2,
+			mutedInfo: {
+				muted: false,
+			},
+			pinned: true,
+			selected: false,
+			status: "complete",
+			title: "Me at the zoo",
+			url: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
 			width: 1920,
 			windowId: 2009560141,
 		},
@@ -72,7 +96,7 @@ if (dev) {
 			highlighted: false,
 			id: 2009560144,
 			incognito: true,
-			index: 2,
+			index: 3,
 			mutedInfo: {
 				muted: true,
 			},
@@ -95,7 +119,7 @@ if (dev) {
 			highlighted: true,
 			id: 2009560145,
 			incognito: true,
-			index: 3,
+			index: 4,
 			mutedInfo: {
 				muted: false,
 			},
@@ -118,7 +142,7 @@ if (dev) {
 			highlighted: false,
 			id: 2009560146,
 			incognito: true,
-			index: 4,
+			index: 5,
 			mutedInfo: {
 				muted: false,
 			},
@@ -141,7 +165,7 @@ if (dev) {
 			highlighted: false,
 			id: 2009560147,
 			incognito: true,
-			index: 5,
+			index: 6,
 			mutedInfo: {
 				muted: false,
 			},
@@ -164,7 +188,7 @@ if (dev) {
 			highlighted: false,
 			id: 2009560148,
 			incognito: true,
-			index: 6,
+			index: 7,
 			mutedInfo: {
 				muted: false,
 			},
@@ -187,7 +211,7 @@ if (dev) {
 			highlighted: false,
 			id: 2009560149,
 			incognito: true,
-			index: 7,
+			index: 8,
 			mutedInfo: {
 				muted: false,
 			},
@@ -207,10 +231,10 @@ if (dev) {
 			favIconUrl: "https://static.figma.com/app/icon/1/favicon.ico",
 			groupId: 1751054339,
 			height: 919,
-			highlighted: true,
+			highlighted: false,
 			id: 2009560154,
 			incognito: true,
-			index: 8,
+			index: 9,
 			lastAccessed: 1717318035882.975,
 			mutedInfo: {
 				muted: false,
@@ -234,7 +258,7 @@ if (dev) {
 			highlighted: false,
 			id: 2009560152,
 			incognito: true,
-			index: 9,
+			index: 10,
 			mutedInfo: {
 				muted: false,
 			},
@@ -257,7 +281,7 @@ if (dev) {
 			highlighted: false,
 			id: 2009560153,
 			incognito: true,
-			index: 10,
+			index: 11,
 			mutedInfo: {
 				muted: false,
 			},
@@ -284,7 +308,7 @@ if (dev) {
 		}
 	}
 	chrome.tabs.remove = (id) => {
-		mockTabs = mockTabs.filter(function (tab) {
+		mockTabs = mockTabs.filter((tab) => {
 			return tab.id !== id
 		})
 	}
@@ -353,7 +377,7 @@ if (dev) {
 		})
 	}
 	chrome.bookmarks.remove = (id) => {
-		mockBookmarks = mockBookmarks.filter(function (bookmark) {
+		mockBookmarks = mockBookmarks.filter((bookmark) => {
 			return bookmark.id !== id
 		})
 	}
@@ -390,24 +414,27 @@ const GroupPrototype = {
 
 function fetchFavicon(url) {
 	return new Promise((resolve, reject) => {
-		fetch(url).then((response) => {
-			if (!response.ok) {
-				reject()
-				return
-			}
+		fetch(url)
+			.then((response) => {
+				if (!response.ok) {
+					reject()
+					return
+				}
 
-			const contentType = response.headers.get("content-type")
+				const contentType = response.headers.get("content-type")
 
-			response.buffer().then((buffer) => {
-				const base64 = buffer.toString("base64")
-				resolve(`data:${contentType};base64,${base64}`)
+				response.buffer().then((buffer) => {
+					const base64 = buffer.toString("base64")
+					resolve(`data:${contentType};base64,${base64}`)
+				})
 			})
-		})
+			.catch(() => {
+				reject()
+			})
 	})
 }
 
-const DefaultFavicon =
-	"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJUlEQVR42mKgOogpKJBMTM08kJCS+RXAJ1UbVBRDUWQIRmACWmwEpHxuN8GpkRIdAOuRfehwnQDXe7696C+eJkdvoox+ceEd/7DWFZyUcinO6JNBf3FOP/z+HGXirkX0hzXs8YJbG78ZvHp2dtaP/3E+Owqwcv1aJLDGSl8Ap6kY7JDmcjfK6UklaDvR4iBfy/Zq+19cyCETqF7AdAiilF6RGbYV0hFWOm9dbyYBiu0QIBcK85XLm090guoDGI3AUPiOM3HJrtbhKs8XBvh7k4mO+DkNMWC0CL6saS5D1Q0IERcRrBKdVy729Ti0apaojlEFHvI1k+Q03t6HESOeMUbjILUJCpo0bK8C7DxI9ezFMtibDuiLQY8oDJn/h5yUKctM1AYAkF4mBkXjJukAAAAASUVORK5CYII="
+let CurrentTabs = []
 
 const TabPrototype = {
 	GetGroup() {
@@ -425,8 +452,8 @@ const TabPrototype = {
 	},
 	GetFavicon() {
 		return new Promise((resolve) => {
-			if (!this.favIconUrl) {
-				resolve(DefaultFavicon)
+			if (dev || !this.favIconUrl) {
+				resolve(null)
 				return
 			}
 
@@ -440,7 +467,7 @@ const TabPrototype = {
 							resolve(favicon)
 						})
 						.catch(() => {
-							resolve(DefaultFavicon)
+							resolve(null)
 						})
 				})
 		})
@@ -453,7 +480,7 @@ const TabPrototype = {
 	},
 
 	IsActive() {
-		return this.highlighted
+		return this.active
 	},
 	IsPinned() {
 		return this.pinned
@@ -508,6 +535,7 @@ function Api() {
 					Object.setPrototypeOf(tab, TabPrototype)
 				})
 
+				CurrentTabs = tabs
 				resolve(tabs)
 			}
 		)
