@@ -11,10 +11,14 @@
 	$: {
 		let newComputedTabs = []
 
+		console.log("\n\n\nComputeTabs...")
+
 		tabs.forEach((tab, i) => {
 			if (hidden[tab.id]) {
 				return
 			}
+
+			console.log(tab.GetTitle())
 
 			tab.GetGroup().then((group) => {
 				const tabData = {

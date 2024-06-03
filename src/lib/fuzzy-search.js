@@ -60,8 +60,9 @@ export default function FzySearch(userinput, tab) {
 	let url = tab.GetURL().toLowerCase()
 
 	return (
-		title.includes(userinput) || url.includes(userinput)
-		// || Fuzzy2(userinput, title)
-		// || Fuzzy2(userinput, url)
+		title.includes(userinput) ||
+		url.includes(userinput) ||
+		Fuzzy2(userinput, title) ||
+		Fuzzy2(userinput, url)
 	)
 }
