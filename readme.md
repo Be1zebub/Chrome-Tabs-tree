@@ -5,7 +5,7 @@ Manage, navigate, and search tabs with an intuitive and aesthetic UI.
 Essential for anyone managing numerous tabs and tab groups.
 
 Killer-feature: "**Archive**"  
-If you're overwhelmed by too many tabs, the "Archive Group" & "Archive Tab" feature allows you to temporarily remove it from tab bar while saving its contents for later access.
+If you're overwhelmed by too many tabs, the "Archive Group" & "Archive Tab" features allows you to temporarily remove it from tab bar while saving its contents for later access.
 
 ![preview](media/preview.png)
 
