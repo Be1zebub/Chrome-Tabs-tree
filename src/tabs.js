@@ -220,11 +220,13 @@ app.tabs.createGroup = (groupId, parent) => {
 	li.addEventListener("contextmenu", (e) => {
 		e.preventDefault()
 
-		chrome.tabGroups.get(groupId, (groupData) => {
-			const menu = app.contextMenu.open(li)
-			app.tabs.groupOptions(menu, groupId, groupData, li)
-			app.contextMenu.setPos(menu, e)
-		})
+		if (e.target === li || e.target == li.span || e.target == li.ul) {
+			chrome.tabGroups.get(groupId, (groupData) => {
+				const menu = app.contextMenu.open(li)
+				app.tabs.groupOptions(menu, groupId, groupData, li)
+				app.contextMenu.setPos(menu, e)
+			})
+		}
 	})
 
 	li.span.textContent = groupId
