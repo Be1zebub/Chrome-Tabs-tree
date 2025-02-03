@@ -1,13 +1,15 @@
 # Tabs tree
 
-A tiny chrome extension designed to enhance **Quality of Life**.  
+Tree style tabs manager designed to enhance **Quality of Life**.  
 Manage, navigate, and search tabs with an intuitive and aesthetic UI.  
 Essential for anyone managing numerous tabs and tab groups.
 
 Killer-feature: "**Archive**"  
 If you're overwhelmed by too many tabs, the "Archive Group" & "Archive Tab" features allows you to temporarily remove it from tab bar while saving its contents for later access.
 
-![preview](media/preview.png)
+[![promo](media/marquee-promo-tile.png)](https://github.com/Be1zebub/Chrome-Tabs-tree)
+
+[![chrome webstore bage](https://developer.chrome.com/static/docs/webstore/branding/image/206x58-chrome-web-bcb82d15b2486.png)](https://chromewebstore.google.com/detail/caiolhdecffonacjeopghjdepmfakdnd/preview?hl=en&authuser=0)
 
 ## Usage
 
@@ -23,8 +25,6 @@ If you're overwhelmed by too many tabs, the "Archive Group" & "Archive Tab" feat
 3. Click "Load unpacked" in header section
 4. Select repo directory
 5. Have fun
-
-Since this is a pet project that i made in a few hours for personal needs, i do not plan to publish it on the `chromewebstore` in the near future.  
 
 ## Other browsers?
 
