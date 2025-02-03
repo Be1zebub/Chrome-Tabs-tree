@@ -1,0 +1,143 @@
+.tab-group {
+	margin-bottom: 20px;
+}
+
+.tabs-list {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 0;
+	padding-bottom: 8px;
+}
+
+.tabs-element {
+	background: none;
+	border-width: 0;
+	padding: 0;
+	margin-top: 12px;
+}
+
+.tabs-element > span {
+	font-size: 12px;
+	font-weight: 500;
+	color: rgb(32, 33, 36);
+	border-radius: 5px;
+	padding: 6px;
+	user-select: none;
+}
+
+.tabs-group {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding-left: 16px;
+	margin-top: 16px;
+	border-left-width: 1px;
+	border-left-color: #585858;
+	border-left-style: solid;
+}
+
+.tabs-element.collapsed > .tabs-group {
+	display: none;
+}
+
+.tab {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	background-color: rgb(42, 42, 42);
+	border-width: 0;
+	margin: 0;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.tab * {
+	pointer-events: none;
+}
+
+.tab:hover {
+	background-color: rgb(50, 55, 61);
+}
+
+.tab.highlighted {
+	border-color: #507054;
+	border-width: 4px;
+	border-left-style: solid;
+	border-right-style: solid;
+}
+
+.tab-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.tab-header img,
+.tab-icons img {
+	width: 14px;
+	height: 14px;
+}
+
+.tab-header img.small,
+.tab-icons img.small {
+	width: 10px;
+	height: 10px;
+}
+
+.tab-header > .tab-title {
+	font-size: 14px;
+	font-weight: 500;
+	color: rgb(225, 225, 225);
+}
+
+.tab-desc {
+	font-size: 10px;
+	font-weight: 400;
+	color: rgb(190, 200, 220);
+}
+
+.tab-header > .tab-title,
+.tab-desc {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+}
+
+.tab-header > .tab-title {
+	max-width: 75%;
+}
+
+.group-colorpicker {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 10px;
+}
+
+.group-colorpicker > button {
+	cursor: pointer;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	border-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}
+
+.group-colorpicker > button.active::after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #25231f;
+}
+
+.tab-icons {
+	display: flex;
+	gap: 6px;
+}

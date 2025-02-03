@@ -1,0 +1,120 @@
+body {
+	font-family: Arial, sans-serif;
+	width: 512px;
+	max-height: 768px;
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	background-color: #131313;
+}
+
+img {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	padding: 8px;
+	margin-bottom: 5px;
+	overflow-wrap: break-word;
+	cursor: pointer;
+}
+
+footer {
+	padding: 8px 0;
+}
+
+footer > p {
+	color: rgb(200, 200, 200);
+	text-align: center;
+	margin: 0;
+}
+
+footer > p > a,
+footer > p > a:visited {
+	color: rgb(0, 168, 252);
+}
+
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(31, 31, 31);
+}
+
+::-webkit-scrollbar-track {
+	background: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #313131;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+	* {
+		scrollbar-color: #0081ff transparent;
+	}
+}
+
+.footer-emoji {
+	height: 14px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+nav {
+	display: flex;
+	margin-bottom: 16px;
+}
+
+nav > button {
+	width: 50%;
+	height: 40px;
+	border-style: none;
+	background-color: transparent;
+	cursor: pointer;
+	color: rgb(180, 180, 180);
+}
+
+nav > button.active {
+	color: white;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: rgb(80, 136, 88);
+}
+
+.blank-archive {
+	background-color: #2a2a2a;
+	padding: 8px 48px;
+}
+
+.blank-archive > * {
+	text-align: center;
+}
+
+.blank-archive > h1 {
+	font-size: 15px;
+	font-weight: 500;
+	color: rgb(225, 225, 225);
+}
+
+.blank-archive > p {
+	font-size: 12px;
+	font-weight: 400;
+	color: rgb(190, 200, 220);
+}
+
+.blank-archive > p:nth-child(2) {
+	margin-bottom: 0;
+}
+.blank-archive > p:last-child {
+	margin-top: 0;
+}

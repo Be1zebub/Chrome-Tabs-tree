@@ -1,34 +1,32 @@
 {
-    "manifest_version": 3,
-    "name": "Tabs Tree",
-    "version": "1.0",
+	"manifest_version": 3,
+	"name": "Tabs Tree",
+	"version": "2.0",
 	"author": "https://t.me/be1zebub",
-    "description": "A tree style tabs navigator with searchbar",
-    "permissions": [
-        "tabs",
+	"description": "A tree style tabs navigator with searchbar & 'Minimize Group' feature.",
+	"permissions": [
+		"tabs",
 		"tabGroups",
 		"activeTab",
-        "commands",
-		"bookmarks"
-    ],
-	"host_permissions": [
-		"http://*/*",
-		"https://*/*"
+		"commands",
+		"bookmarks",
+		"windows"
 	],
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "commands": {
-        "_execute_action": {
-            "suggested_key": {
-                "default": "Alt+Q"
-            },
-            "description": "Open the popup"
-        }
-    },
+	"host_permissions": ["http://*/*", "https://*/*"],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"commands": {
+		"_execute_action": {
+			"suggested_key": {
+				"default": "Alt+Q"
+			},
+			"description": "Opens Tabs Tree"
+		}
+	},
 	"icons": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-    }
+		"16": "media/icon16.png",
+		"48": "media/icon48.png",
+		"128": "media/icon128.png"
+	}
 }

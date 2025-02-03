@@ -2,27 +2,55 @@
 <html>
 	<head>
 		<title>Tabs tree</title>
-		<link rel="stylesheet" href="style.css" />
+
+		<link rel="stylesheet" href="popup.css" />
+
+		<link rel="stylesheet" href="src/css/tabs.css" />
+		<link rel="stylesheet" href="src/css/search.css" />
+		<link rel="stylesheet" href="src/css/context-menu.css" />
 	</head>
 	<body>
-		<div class="search-bar">
-			<input placeholder="Search by title or url..." autofocus />
-			<button></button>
-		</div>
-		<ul class="tabs-list"></ul>
+		<nav>
+			<button data-target-id="tabs" class="active">Tabs</button>
+			<button data-target-id="archive">Archive</button>
+		</nav>
+		<section id="tabs">
+			<div class="entry search-bar">
+				<input placeholder="Search by title or url..." autofocus />
+				<button></button>
+			</div>
+			<ul class="tabs-list"></ul>
+		</section>
+		<section id="archive">
+			<ul class="tabs-list"></ul>
+		</section>
 		<footer>
-			<p>
+			<p style="margin-bottom: 4px">
 				from
 				<a href="https://gmod.one" target="_blank">gmod.one</a>
-				with ❤️
+				with
+				<img src="media/heart.webp" class="footer-emoji" />
 			</p>
 			<p>
 				star on
 				<a href="https://github.com/Be1zebub/Chrome-Tabs-tree" target="_blank"
 					>github</a
 				>
+				<img src="media/star.png" class="footer-emoji" />
+			</p>
+			<p>
+				<a href="https://t.me/be1zebub">contact</a> developer
+				<img src="media/contact.png" class="footer-emoji" />
 			</p>
 		</footer>
+
+		<script src="src/init.js"></script>
+		<script src="src/archive.js"></script>
+		<script src="src/archive-ui.js"></script>
+		<script src="src/tabs.js"></script>
+		<script src="src/search.js"></script>
+		<script src="src/context-menu.js"></script>
+
 		<script src="popup.js"></script>
 	</body>
 </html>
