@@ -9,7 +9,7 @@ If you're overwhelmed by too many tabs, the "Archive Group" & "Archive Tab" feat
 
 [![promo](media/marquee-promo-tile.png)](https://github.com/Be1zebub/Chrome-Tabs-tree)
 
-[![chrome webstore bage](https://developer.chrome.com/static/docs/webstore/branding/image/206x58-chrome-web-bcb82d15b2486.png)](https://chromewebstore.google.com/detail/caiolhdecffonacjeopghjdepmfakdnd/preview?hl=en&authuser=0)
+[![chrome webstore bage](https://developer.chrome.com/static/docs/webstore/branding/image/206x58-chrome-web-bcb82d15b2486.png)](https://chromewebstore.google.com/detail/tabs-tree/caiolhdecffonacjeopghjdepmfakdnd)
 
 ## Usage
 
